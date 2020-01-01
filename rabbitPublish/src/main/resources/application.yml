@@ -1,0 +1,15 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+    #开启消息发送确认机制
+#    publisher-confirms: true
+    publisher-confirm-type: correlated
+    template:
+    #开启mandatory: true, basic.return方法将消息返还给生产者
+      mandatory: true
+server:
+  port: 8081
+

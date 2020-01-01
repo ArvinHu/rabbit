@@ -1,0 +1,12 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+    #开启手动ack,控制消息在MQ中的删除，重发...处理完毕
+    listener:
+      simple:
+        acknowledge-mode: manual
+server:
+  port: 8082
